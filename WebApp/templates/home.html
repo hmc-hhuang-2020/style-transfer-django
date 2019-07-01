@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Style Transfer</title>
+    <link rel="stylesheet" href="./home.css">
+    <script type="text/javascript" src="./home.js"></script>
+  </head>
+  <body>
+
+    <h1>Style Transfer</h1>
+
+    <!--Photo Buttons-->
+    <div id="photoButtonsDiv">
+
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit New Post</button>
+      </form>
+      <!--Import photo button-->
+      <!-- <div class="button" id="importButton">
+        <form action="#">
+          <div class="input-file-container">  
+            <input class="input-file" id="importFile" name="file" type="file" accept="image/*">
+            <label tabindex="0" for="importFile" class="input-file-trigger"> -->
+              <!-- Import</br>Photo -->
+            <!-- </label>
+          </div>
+          <p class="file-return"></p>
+        </form>
+        <img src="./upload.png" class="icon" alt="Import photo" />
+      </div> -->
+
+      <!--Right Half-->
+      <!-- <div id="right"> -->
+        <!--Category Dropdown-->
+        <!-- <div id="dropdown">
+          <span class="dropdown">
+              <select>
+                  <option>Whole Style Transfer</option>
+                  <option>Object Style Transfer</option>  
+              </select>
+          </span>
+        </div> -->
+
+        <!--Photo Status-->
+        <!-- <h4>No photo uploaded</h4> -->
+
+        <!--Done Button-->
+        <!-- <a href="./sending.html"> -->
+          <!-- <input class="button" type="submit" value="Done" id="done">
+          </button> -->
+        <!-- </a> -->
+      <!-- </div> -->
+
+    </div>
+
+    
+  </body>
+</html>
+
+
