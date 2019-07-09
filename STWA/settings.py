@@ -31,6 +31,10 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'storages',
+    'widget_tweaks',
+    # 'storages.backends.gs',
+    'storages.backends.gcloud',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'WebApp',
-    
 ]
 
 MIDDLEWARE = [
@@ -157,14 +160,16 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-DEFAULT_FILE_STORAGE = 'storages.backends.gs.GSBotoStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 GS_ACCESS_KEY_ID = 'style-transfer-web'
-# GS_SECRET_ACCESS_KEY = 'YourKEY'
 GS_BUCKET_NAME = 'style-input-images'
-STATICFILES_STORAGE = 'storages.backends.gs.GSBotoStorage'
-MEDIA_URL = 'https://storage.googleapis.com/{}/'.format(GS_BUCKET_NAME)
+
+# DEFAULT_FILE_STORAGE = 'storages.backends.gs.GSBotoStorage'
+# GS_SECRET_ACCESS_KEY = 'YourKEY'
+# STATICFILES_STORAGE = 'storages.backends.gs.GSBotoStorage'
+# MEDIA_URL = 'https://storage.googleapis.com/{}/'.format(GS_BUCKET_NAME)
 
 # DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 # GS_BUCKET_NAME = 'YOUR_BUCKET_NAME_GOES_HERE'

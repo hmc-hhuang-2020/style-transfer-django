@@ -11,3 +11,9 @@ class HomePageView(CreateView):
     form_class = PostForm
     template_name = 'home.html'
     success_url = reverse_lazy('home')
+
+class AboutUsPageView(CreateView):
+    template_name = 'about.html'
+
+def about(request):
+   return render(request, "about.html")
